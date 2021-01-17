@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Eye Of The Hurricane</title>
+
+    <!-- update the version number as needed -->
+    <script defer src="/__/firebase/8.2.3/firebase-app.js"></script>
+    <!-- include only the Firebase features as you need -->
+    <script defer src="/__/firebase/8.2.3/firebase-auth.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-database.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-firestore.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-functions.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-messaging.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-storage.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-analytics.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-remote-config.js"></script>
+    <script defer src="/__/firebase/8.2.3/firebase-performance.js"></script>
+    <!-- 
+      initialize the SDK after all desired features are loaded, set useEmulator to false
+      to avoid connecting the SDK to running emulators.
+    -->
+    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            position: relative;
+            overflow: hidden;
+            background-color: black;
+        }
+
+        .jumbotron video {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            /*  object-fit is not supported on IE  */
+            object-fit: cover;
+            opacity: 0.5;
+        }
+
+        .jumbotron .container {
+            z-index: 2;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #ffc0cb;">
+            <a class="navbar-brand" href="index.html">Eye Of The Hurricane</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+                aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="grounding.html">Grounding</a>
+                    <a class="nav-item nav-link" href="distraction.html">A distraction</a>
+                    <a class="nav-item nav-link" href="#">Helpful Apps</a>
+                    <a class="nav-item nav-link active" href="crisis.html">Crisis hotlines<span
+                            class="sr-only">(current)</span></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="jumbotron jumbotron-fluid">
+
+            <video autoplay muted loop poster="https://dummyimage.com/900x400/000/fff">
+                <source src="media/mixkit-daisy-flowers-near-a-big-waterfall-19501-medium.mp4" type="video/mp4">
+            </video>
+
+            <div class="container text-white">
+
+                <h1 class="display-4">Crisis Contacts</h1>
+                <p class="lead">Below are hotlines and chats where you can get in touch with someone if you're in a
+                    crisis.</p>
+            </div>
+            <!-- /.container -->
+        </div>
+        <!-- /.jumbotron -->
+        <div class="container">
+            <h2>Resources</h2>
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <h3>National Suicide Prevention Lifeline</h3>
+                        <p>(800) 273-8255</p>
+                        <a href="https://suicidepreventionlifeline.org/chat/">Chat Online</a>
+                        <h3>National Suicide Prevention Lifeline (Spanish)</h3>
+                        <p>(888) 628-9454</p>
+                        <h3>National Suicide Prevention Lifeline (Options for Deaf and Hard of Hearing)</h3>
+                        <p>(800) 799-4889</p>
+                        <h3>Crisis Text Line</h3>
+                        <p>Text HELLO to 741741</p>
+                        <h3>National Domestic Violence Hotline</h3>
+                        <p>(800) 799-7233</p>
+                        <a href="https://www.thehotline.org/#">Chat Online</a>
+                        <h3>Veterans Crisis Line</h3>
+                        <p>(800) 273-8255</p>
+                        <p>Text 838255</p>
+                        <a href="https://www.veteranscrisisline.net/get-help/chat">Chat Online</a>
+                    </div>
+                    <div class="col">
+                        <h3>National Graduate Student Crisis Hotline</h3>
+                        <p>(877) 472-3457</p>
+                        <h3>National Sexual Assault Hotline</h3>
+                        <p>(800) 656-4673</p>
+                        <h3>Child Abuse Hotline</h3>
+                        <p>(800) 422-4453</p>
+                        <h3>CDC National HIV &amp; AIDS Hotline</h3>
+                        <p>(800) 342-2437</p>
+                        <h3>Alcoholics Anonymous</h3>
+                        <p>(202) 966-9155</p>
+                        <h3>Narcotics Anonymous</h3>
+                        <p>(800) 543-4670</p>
+                        <h3>Gamblers Anonymous</h3>
+                        <p>(855) 222-5542</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </main>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const loadEl = document.querySelector('#load');
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+            // // The Firebase SDK is initialized and available here!
+            //
+            // firebase.auth().onAuthStateChanged(user => { });
+            // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+            // firebase.firestore().doc('/foo/bar').get().then(() => { });
+            // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+            // firebase.messaging().requestPermission().then(() => { });
+            // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+            // firebase.analytics(); // call to activate
+            // firebase.analytics().logEvent('tutorial_completed');
+            // firebase.performance(); // call to activate
+            //
+            // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+
+            try {
+                let app = firebase.app();
+                let features = [
+                    'auth',
+                    'database',
+                    'firestore',
+                    'functions',
+                    'messaging',
+                    'storage',
+                    'analytics',
+                    'remoteConfig',
+                    'performance',
+                ].filter(feature => typeof app[feature] === 'function');
+                loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
+            } catch (e) {
+                console.error(e);
+                loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+            }
+        });
+    </script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
