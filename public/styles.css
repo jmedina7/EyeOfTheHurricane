@@ -20,4 +20,7 @@
     position: relative;
 }
 
-body {background-color: #7dedb5;}
+body {
+    background-color: #7dedb5;
+    color: royalblue;
+}
